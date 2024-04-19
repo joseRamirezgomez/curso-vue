@@ -29,7 +29,12 @@ const objetoFruta = {
   nombre: 'Pera',
   precio: 300,
   descripcion: 'Una Pera'
-} 
+};
+
+// metodos -methods
+const handleClick = (message) => {
+  console.log(message);
+};
 </script>
 
 <template>
@@ -72,6 +77,14 @@ const objetoFruta = {
       </li>
     </template>
   </ul>
+
+  <!-- v-on:click -->
+
+  <button v-on:click.right.prevent="handleClick('Texto right')">Activame right</button>
+  <button @click="handleClick('Texto left')">Activame left</button>
+  <button @click.middle="handleClick('Texto middle')">Activame middle</button>
+
+
 </template>
 
 <style>
