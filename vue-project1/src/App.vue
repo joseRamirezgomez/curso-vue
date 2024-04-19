@@ -21,7 +21,13 @@ const arrayFrutas2 = [
     precio: 200,
     descripcion: 'Una Banana'
   }
-]
+];
+
+const objetoFruta = {
+    nombre:'Pera',
+    precio: 300,
+    descripcion: 'Una Pera'
+  } 
 </script>
 
 <template>
@@ -43,6 +49,13 @@ const arrayFrutas2 = [
 
   <ul>
     <li v-for="(fruta, index) in arrayFrutas" :key="index">{{index}} - {{ fruta }}</li>
+  </ul>
+
+  <!-- recorriendo objetos -->
+  <ul>
+    <li v-for="(value, propiedad) in objetoFruta" :key="value">
+    {{ propiedad }} : {{ value }}
+    </li>
   </ul>
 </template>
 
